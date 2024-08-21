@@ -101,30 +101,45 @@ echo "source ~/ros2_ws/install/local_setup.bash" >> ~/.bashrc
 # Personalization
 #
 gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/jj_dark_by_Hiking93.jpg'
+
 gsettings set org.gnome.gedit.preferences.editor highlight-current-line false
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
+
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
+
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true
 gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
+
 gsettings set org.gnome.shell.extensions.ding start-corner 'top-left'
+gsettings set org.gnome.shell.extensions.ding arrangeorder 'KIND'
+gsettings set org.gnome.shell.extensions.ding keep-arranged true
+gsettings set org.gnome.shell.extensions.ding keep-stacked false
+gsettings set org.gnome.shell.extensions.ding show-link-emblem true
 gsettings set org.gnome.shell.extensions.ding show-home true
+gsettings set org.gnome.shell.extensions.ding icon-size 'standard'
+gsettings set org.gnome.shell.extensions.ding show-trash true
+gsettings set org.gnome.shell.extensions.ding sort-special-folders true
+
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 32
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash true
 gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts true
+
 gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+
 gsettings set org.gnome.desktop.session idle-delay 0
+
 gsettings set org.gnome.settings-daemon.plugins.power power-saver-profile-on-low-battery true
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'nothing'
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action 'interactive'
+
 gsettings set org.gnome.desktop.interface show-battery-percentage true
+
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action 'suspend'
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action 'suspend'
+
 dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'org.gnome.Terminal.desktop', 'gnome-terminal.desktop', 'code.desktop']"
-
-
-
