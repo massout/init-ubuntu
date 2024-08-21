@@ -4,7 +4,7 @@ sudo apt -y upgrade
 sudo apt -y install build-essential make cmake git wget gpg curl g++
 
 # Solution of Dual-Boot Time Ambiguity
-timedatectl set-local-rtc 1
+sudo timedatectl set-local-rtc 1
 
 # Gnome Tweaks
 sudo apt -y install gnome-tweaks
