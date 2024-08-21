@@ -3,7 +3,7 @@ sudo apt -y upgrade
 
 sudo apt -y install build-essential make cmake git wget gpg curl g++
 
-# Solution of Dual-Boot Time Ambiguity
+# Solution of Time Ambiguity caused by Dual-Boot 
 sudo timedatectl set-local-rtc 1
 
 # Gnome Tweaks
