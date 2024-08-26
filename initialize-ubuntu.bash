@@ -143,3 +143,6 @@ gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action 'suspe
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-battery-action 'suspend'
 
 dconf write /org/gnome/shell/favorite-apps "['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'org.gnome.Terminal.desktop', 'gnome-terminal.desktop', 'code.desktop']"
+
+gsettings set org.gnome.nautilus.preferences default-sort-order 'name'
+gsettings set org.gnome.nautilus.preferences click-policy 'double'
