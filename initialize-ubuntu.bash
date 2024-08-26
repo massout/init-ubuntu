@@ -3,7 +3,7 @@ sudo apt -y upgrade
 
 sudo apt -y install build-essential make cmake git wget gpg curl g++
 
-# Solution of Time Ambiguity caused by Dual-Boot 
+# Solution of Dual-Boot Time Ambiguity
 sudo timedatectl set-local-rtc 1
 
 # Gnome Tweaks
@@ -60,6 +60,7 @@ sudo apt -y install ros-humble-desktop
 sudo apt -y install ros-dev-tools
 
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
 # KiCAD
 sudo apt -y install kicad kicad-footprints kicad-libraries kicad-packages3d kicad-symbols kicad-templates
@@ -91,11 +92,17 @@ sudo apt -y install synaptic
 sudo apt -y install tlp
 sudo tlp start
 
+# LibreOffice
+sudo apt -y install libreoffice
+
+# Add Gazebo Fortress installation when the time comes
+
 # Set ROS2 Workspace 
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws
 colcon build
 echo "source ~/ros2_ws/install/local_setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
 #
 # Personalization
