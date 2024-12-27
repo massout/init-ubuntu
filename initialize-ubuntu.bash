@@ -1,4 +1,4 @@
-sudo apt update
+sudo apt -y update
 sudo apt -y upgrade
 
 sudo apt -y install build-essential make cmake git wget gpg curl g++
@@ -20,7 +20,7 @@ sudo apt -y install python3-pip
 # Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt update
+sudo apt -y update
 sudo apt install -f -y google-chrome-stable
 
 # VSCode
@@ -29,16 +29,16 @@ sudo install -y -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrin
 echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
 rm -f packages.microsoft.gpg
 
-sudo apt install -y apt-transport-https
-sudo apt update
-sudo apt install -y code 
+sudo apt -y install apt-transport-https
+sudo apt -y update
+sudo apt -y install code 
 
 xdg-mime default code.desktop text/plain
 
 # ROS2
 locale  # check for UTF-8
 
-sudo apt update 
+sudo apt -y update 
 sudo apt -y install locales
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
@@ -49,11 +49,11 @@ locale  # verify settings
 sudo apt -y install software-properties-common
 sudo add-apt-repository -y universe
 
-sudo apt update
+sudo apt -y update
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
-sudo apt update
+sudo apt -y update
 sudo apt -y upgrade
 
 sudo apt -y install ros-humble-desktop
@@ -67,7 +67,7 @@ sudo apt -y install kicad kicad-footprints kicad-libraries kicad-packages3d kica
 
 # OBS Studio
 sudo add-apt-repository -y ppa:obsproject/obs-studio
-sudo apt update
+sudo apt -y update
 sudo apt -y install obs-studio
 
 # Blender 
