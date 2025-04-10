@@ -2,7 +2,7 @@
 if ping -c 10 "google.com" > /dev/null 2>&1; then
     echo "Internet conneciton at present, starting!"
 else
-    echo "Ping to "google.com" failed. Please check your internet connection!"
+    echo "Ping to \"google.com\" failed. Please check your internet connection!"
     exit
 fi
 
